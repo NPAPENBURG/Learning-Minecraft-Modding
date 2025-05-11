@@ -1,6 +1,8 @@
 package com.papa.paparpg;
 
 import com.mojang.logging.LogUtils;
+import com.papa.paparpg.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,6 +28,8 @@ public class PapaRPGMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModItems.ITEMS.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -45,7 +49,10 @@ public class PapaRPGMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.PAPARITE);
+            event.accept(ModItems.RAW_PAPARITE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
