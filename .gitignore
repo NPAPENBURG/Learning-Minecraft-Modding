@@ -1,4 +1,46 @@
-# Project exclude paths
-/.gradle/
+# Java bytecode
+*.class
+
+# Logs
+logs/
+*.log
+hs_err_pid*
+
+# Build directories
 /build/
-/build/classes/java/main/
+/out/
+/target/
+
+# Gradle files
+.gradle/
+gradlew
+gradlew.bat
+!/gradle/wrapper/gradle-wrapper.jar
+
+# Eclipse IDE
+/.classpath
+/.project
+/.settings/
+
+# IntelliJ IDEA
+/.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio Code
+/.vscode/
+
+# Minecraft Forge run directory
+/run/
+
+# Packaged archives
+*.jar
+*.zip
+
+# Generated sources
+/gen/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
