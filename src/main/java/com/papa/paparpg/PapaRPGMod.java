@@ -1,6 +1,7 @@
 package com.papa.paparpg;
 
 import com.mojang.logging.LogUtils;
+import com.papa.paparpg.block.ModBlocks;
 import com.papa.paparpg.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -29,6 +30,7 @@ public class PapaRPGMod
         IEventBus modEventBus = context.getModEventBus();
 
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -52,6 +54,11 @@ public class PapaRPGMod
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.PAPARITE);
             event.accept(ModItems.RAW_PAPARITE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.PAPARITE_BLOCK);
+            event.accept(ModBlocks.RAW_PAPARITE_BLOCK);
         }
     }
 

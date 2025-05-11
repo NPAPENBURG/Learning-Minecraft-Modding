@@ -1,4 +1,7 @@
 {
   "item.paparpg.paparite": "Paparite",
-  "item.paparpg.raw_paparite": "Raw Paparite"
+  "item.paparpg.raw_paparite": "Raw Paparite",
+
+  "block.paparpg.paparaite_block": "Block of Paparite",
+  "block.paparpg.raw_paparite_block": "Block of Raw Paparite"
 }
