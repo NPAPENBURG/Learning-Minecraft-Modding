@@ -33,6 +33,8 @@ gradlew.bat
 
 # Minecraft Forge run directory
 /run/
+run
+run/
 
 # Packaged archives
 *.jar
