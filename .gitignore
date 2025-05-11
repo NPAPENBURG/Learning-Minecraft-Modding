@@ -7,41 +7,39 @@ logs/
 hs_err_pid*
 
 # Build directories
-/build/
-/out/
-/target/
+build/
+out/
+target/
 
 # Gradle files
 .gradle/
 gradlew
 gradlew.bat
-!/gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
 
 # Eclipse IDE
-/.classpath
-/.project
-/.settings/
+.classpath
+.project
+.settings/
 
 # IntelliJ IDEA
-/.idea/
+.idea/
 *.iml
 *.iws
 *.ipr
 
 # Visual Studio Code
-/.vscode/
+.vscode/
 
-# Minecraft Forge run directory
-/run/
-run
-run/*
+# Minecraft Forge run directories
+run/
 
 # Packaged archives
 *.jar
 *.zip
 
 # Generated sources
-/gen/
+gen/
 
 # OS-specific files
 .DS_Store
